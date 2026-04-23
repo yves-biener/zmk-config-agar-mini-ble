@@ -83,11 +83,11 @@
         none: none { display-name = "None"; };
         
 
-        #if 0
-        out: outputs { display-name = "zmk_reserved_output_sel"; };
+        #if 1
+        out: outputs { display-name = "zmk_sel_out"; };
         ZMK_MACRO(Device_USB, bindings = <&out OUT_USB>;)
 
-        bt: bluetooth { display-name = "zmk_reserved_bluetooth"; };
+        bt: bluetooth { display-name = "zmk_ble"; };
         
         #define SHOW_LED 0xAB //A5-AF Reserved
         ZMK_MACRO(FW_VER, bindings = <&kp LCTRL &kp LALT &kp LSHIFT &kp LGUI &kp RCTRL &kp RALT &kp RSHIFT &kp RGUI>;)
@@ -100,7 +100,7 @@
 
         device_bt1: device_bt1 {
             compatible = "zmk,behavior-hold-tap";
-            display-name = "Device_BT1";
+            display-name = "BT1";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <3000>;  // delay amount in ms
@@ -108,7 +108,7 @@
         };
         device_bt2: device_bt2 {
             compatible = "zmk,behavior-hold-tap";
-            display-name = "Device_BT2";
+            display-name = "BT2";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <3000>;  // delay amount in ms
@@ -116,7 +116,7 @@
         };
         device_bt3: device_bt3 {
             compatible = "zmk,behavior-hold-tap";
-            display-name = "Device_BT3";
+            display-name = "BT3";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <3000>;  // delay amount in ms
@@ -125,13 +125,13 @@
         //
         soft_off: z_so_off {
             compatible = "zmk,behavior-soft-off";
-            display-name = "KBD Lock";
+            display-name = "Lock";
             #binding-cells = <0>;
             hold-time-ms = <1000>;
         };
 
-        sys_reset: sysreset { display-name = "zmk_reserved_reset"; };
-        bootloader: bootload { display-name = "zmk_reserved_bootloader"; };
+        sys_reset: sysreset { display-name = "zmk_reset"; };
+        bootloader: bootload { display-name = "zmk_bootload"; };
         
         bootloader_reset:bootloader_reset {
             compatible = "zmk,behavior-hold-tap";
@@ -142,7 +142,7 @@
             bindings = <&bootloader>, <&sys_reset>;
         };
         
-        studio_unlock: studio_unlock { display-name = "zmk_reserved_studio_unlock"; };
+        studio_unlock: studio_unlock { display-name = "zmk_unlock"; };
         #endif
         
         //mouse move
