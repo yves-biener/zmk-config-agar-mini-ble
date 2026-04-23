@@ -16,4 +16,10 @@ include:
   - board: klink
     shield: agar_mini_ble
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+  - board: klink
+    shield: settings_reset
+  - board: seeeduino_xiao_ble
+    shield: agar_mini_dongle
+  - board: seeeduino_xiao_ble
+    shield: settings_reset

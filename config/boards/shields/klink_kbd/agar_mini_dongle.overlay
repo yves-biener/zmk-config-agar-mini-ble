@@ -1,0 +1,17 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+#include <physical_layouts.dtsi>
+#include "common.overlay"
+
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+		physical-layout = <&layout_all>;
+    };
+
+    mock_kscan: mock_kscan_0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+};

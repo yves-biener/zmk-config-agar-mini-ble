@@ -1,5 +1,8 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
+config SHIELD_AGAR_MINI_DONGLE
+    def_bool $(shields_list_contains,agar_mini_dongle)
+
 config SHIELD_AGAR_MINI_BLE
     def_bool $(shields_list_contains,agar_mini_ble)
