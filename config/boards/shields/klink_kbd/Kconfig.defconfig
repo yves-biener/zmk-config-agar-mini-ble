@@ -26,5 +26,5 @@ config BT_MAX_PAIRED
 
 endif
 
-config LED
-    default y
+# config LED
+#     default y
