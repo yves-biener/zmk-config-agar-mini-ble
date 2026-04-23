@@ -30,9 +30,9 @@
             keep-mods = <(MOD_RSFT)>;
         };
 
-        mo: momentary_layer { display-name = "Layer Momentary"; };
-        to: to_layer { display-name = "Layer To"; };
-        tog: toggle_layer { display-name = "Layer Toggle"; };
+        mo: momentary_layer { display-name = "LM"; };
+        to: to_layer { display-name = "ToL"; };
+        tog: toggle_layer { display-name = "LT"; };
 
         // mt default: hold preferred. Rename it.
         mt: mod_tap {
@@ -42,7 +42,7 @@
             tapping-term-ms = <260>;
             quick-tap-ms = <240>;
             bindings = <&kp>, <&kp>;
-            display-name = "Mod-Tap(HP)";
+            display-name = "MT(HP)";
         };
 
         // mt_tp tap preferred
@@ -53,7 +53,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <180>;
             bindings = <&kp>, <&kp>;
-            display-name = "Mod-Tap(TP)";
+            display-name = "MT(TP)";
         };
 
         // lt default: tap preferred. Rename it.
@@ -64,7 +64,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <180>;
             bindings = <&mo>, <&kp>;
-            display-name = "Layer-Tap(TP)";
+            display-name = "LT(TP)";
         };
 
         // lt_hp:  hold preferred
@@ -75,15 +75,15 @@
             tapping-term-ms = <260>;
             quick-tap-ms = <240>;
             bindings = <&mo>, <&kp>;
-            display-name = "Layer-Tap(HP)";
+            display-name = "LT(HP)";
         };
         
         // trans和none重命名一下，trans排在前面
-        trans: transparent { display-name = "_Trans"; };
-        none: none { display-name = "Key(None)"; };
+        trans: transparent { display-name = "_Tr"; };
+        none: none { display-name = "None"; };
         
 
-        #if 1
+        #if 0
         out: outputs { display-name = "zmk_reserved_output_sel"; };
         ZMK_MACRO(Device_USB, bindings = <&out OUT_USB>;)
 
@@ -148,28 +148,28 @@
         //mouse move
         mmu:mouse_move_up {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "Mouse Move Up";
+            display-name = "Mouse Up";
             #binding-cells = <0>;
             tapping-term-ms = <0>;
             bindings = <&mmv MOVE_UP>;
         };
         mmd:mouse_move_down {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "Mouse Move Down";
+            display-name = "Mouse Down";
             #binding-cells = <0>;
             tapping-term-ms = <0>;
             bindings = <&mmv MOVE_DOWN>;
         };
         mml:mouse_move_left {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "Mouse Move Left";
+            display-name = "Mouse Left";
             #binding-cells = <0>;
             tapping-term-ms = <0>;
             bindings = <&mmv MOVE_LEFT>;
         };
         mmr:mouse_move_right {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "Mouse Move Right";
+            display-name = "Mouse Right";
             #binding-cells = <0>;
             tapping-term-ms = <0>;
             bindings = <&mmv MOVE_RIGHT>;
@@ -177,28 +177,28 @@
         //mouse scroll
         msu:mouse_scroll_up {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "Mouse Scroll Up";
+            display-name = "Scroll Up";
             #binding-cells = <0>;
             tapping-term-ms = <0>;
             bindings = <&msc SCRL_UP>;
         };
         msd:mouse_scroll_down {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "Mouse Scroll Down";
+            display-name = "Scroll Down";
             #binding-cells = <0>;
             tapping-term-ms = <0>;
             bindings = <&msc SCRL_DOWN>;
         };
         msl:mouse_scroll_left {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "Mouse Scroll Left";
+            display-name = "Scroll Left";
             #binding-cells = <0>;
             tapping-term-ms = <0>;
             bindings = <&msc SCRL_LEFT>;
         };
         msr:mouse_scroll_right {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "Mouse Scroll Right";
+            display-name = "Scroll Right";
             #binding-cells = <0>;
             tapping-term-ms = <0>;
             bindings = <&msc SCRL_RIGHT>;
