@@ -41,9 +41,5 @@
         };
 
         layer4 { status = "reserved"; };
-        layer5 { status = "reserved"; };
-        layer6 { status = "reserved"; };
-        layer7 { status = "reserved"; };
-
     };
 };
