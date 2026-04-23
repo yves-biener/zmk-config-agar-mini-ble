@@ -5,7 +5,7 @@
 / {
     chosen {
         zmk,kscan = &mock_kscan;
-		physical-layout = <&layout_all>;
+        zmk,physical-layout = &layout_all;
     };
 
     mock_kscan: mock_kscan_0 {
