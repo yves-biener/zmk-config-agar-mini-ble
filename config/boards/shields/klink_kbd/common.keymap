@@ -5,7 +5,7 @@
  */
 #define FW_VER zmk_firmware_version_251115
  
-#if 1
+#if 0
 #define ZMK_BEHAVIORS_OMIT_CAPS_WORD        // &caps_word
 #define ZMK_BEHAVIORS_OMIT_KT               // &kt, Key Toggle
 #define ZMK_BEHAVIORS_OMIT_KEY_REPEAT       // &key_repeat, Key Repeat
@@ -15,7 +15,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
@@ -118,13 +117,5 @@
             bindings = <&bootloader>, <&sys_reset>;
         };
         #endif
-    };
-    combos {
-        compatible = "zmk,combos";
-        combo_clear_mods {
-            timeout-ms = <20>;
-            key-positions = <1 11>; // Q  and \|
-            bindings = <&FW_VER>;
-        };
     };
 };
